@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>library</title>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+    <link rel=" stylesheet " type=" text / css "
+          href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.css"/>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+<div id="fullpage">
+    <div class="section active" id="section0"><h1>fullPage.js</h1>
+        <div class="js-example-basic-multiple" >
+            <select class="js-example-basic-single" name="state" >
+                <option value="AL" >Alabama</option >
+                <option value="WY">Wyoming</option>
+                <option value="AL">UKRAIN</option>
+                <option value="WY"> Algeria</option>
+                <option value="AL"> American Samoa</option>
+                <option value="WY">AndorrA</option>
+                <option value="AL">Azer</option>
+                <option value="WY">Angola</option>
+                <option value="AL">Anguilla</option>
+                <option value="WY">Antarctica</option>
+                <option value="AL">Antigua and Barbuda</option>
+                <option value="WY"> Armenia</option>
+                <option value="AL"> Aruba</option>
+                <option value="WY">  Australia</option>
+                <option value="AL">Bahamas</option>
+                <option value="WY"> Bangladesh</option>
+            </select>
+        </div>
+    </div>
+    <div class="section" id="section1">
+        <div class="slide active"><h1>Simple Demo</h1>
+            <div class="flatpickr">
+                <input class="selector" type="text" placeholder="Select Date.." data-input> <!-- input is mandatory -->
+
+                <a class="input-button" title="toggle" data-toggle>
+                    <i class="icon-calendar"></i>
+                </a>
+
+                <a class="input-button" title="clear" data-clear>
+                    <i class="icon-close"></i>
+                </a>
+            </div>
+        </div>
+        <!--<div class="slide "><h1>Only text</h1></div>-->
+        <!--<div class="slide"><h1>And text</h1></div>-->
+        <!--<div class="slide"><h1>And more text</h1></div>-->
+    </div>
+    <div class="section" id="section2"><h1>No wraps, no extra markup</h1>
+
+    </div>
+    <div class="section" id="section3"><h1>Just the simplest demo ever</h1></div>
+</div>
+
+<script type="text/javascript" src="../dist/fullpage.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+    });
+
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+    });
+</script>
+<script>
+    $(".selector").flatpickr({
+        placeholder:"Choose your birthday",
+        dateFormat:"d-m-Y",
+        defaultDate:["01-01-1990"]
+        }
+    );
+</script>
+</body>
+</html>
